@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-.Card{
-    @apply w-48 h-64 shadow-md rounded-lg bg-cover overflow-hidden
+
+.cards--Container{
+    @apply w-auto h-72 items-center overflow-x-auto overscroll-x-contain flex space-x-4
+}
+.card{
+    @apply w-48 h-64 shadow-md rounded-lg overflow-hidden flex-none
+}
+
+.card--Cover{
+    @apply w-full h-3/5 bg-cover
+}
+
+.card--Info{
+    @apply w-full h-2/5 bg-secondary
+}
+
+.card--Info__Title{
+    @apply text-white text-2xl font-bold px-4 py-2
+}
+
+.card--Info__SubTitle{
+    @apply text-white text-base px-4 py-2
+}
+
+.card:nth-of-type(even) .card--Info {
+    @apply bg-white;
+}
+
+.card:nth-of-type(even) .card--Info__Title,
+.card:nth-of-type(even) .card--Info__SubTitle {
+    @apply text-terciary;
 }
