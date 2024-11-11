@@ -9,7 +9,7 @@
 <body>
     <nav></nav>
     <div id="tab_bar"></div>
-    <section class="w-full h-screen">
+    <section class="w-full h-full">
         <div id="home">
             <div class="w-full h-3/4">
                 <div class="w-full h-full flex flex-col absolute space-y-96 py-4 items-center">
@@ -21,7 +21,17 @@
                 </div>
             </div>
         </div>
-        <div id="recommended"></div>
+        <div id="recommended" class="p-14 ">
+            <div class="w-48 h-64 shadow-md rounded-lg bg-cover overflow-hidden">
+                <div class="w-full h-3/5 rounded-lg">
+                    <img class="w-full h-full" src="../public/images/norway.jpg" alt="">
+                </div>
+                <div class="w-full h-2/5 bg-secondary">
+                    <p class="text-white text-2xl font-bold px-4 py-2">Norway</p>
+                    <p class="text-white text-base px-4 py-2">Incredible landscapes</p>
+                </div>
+            </div>
+        </div>
         <div id="featured_incomes"></div>
         <div id="faq"></div>
     </section>
