@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
+        'sanFranciscoDesktop': "url('../images/sanFranciscoDesktop.jpg')",
         'bali': "url('../images/bali.jpg')",
         'chicago': "url('../images/chicago.jpg')",
         'europe': "url('../images/europe.jpg')",
@@ -13,7 +14,6 @@ module.exports = {
         'new_york': "url('../images/new_york.jpg')",
         'norway': "url('../images/norway.jpg')",
         'sanFrancisco': "url('../images/sanFrancisco.jpg')",
-        'sanFranciscoDesktop': "url('../images/sanFranciscoDesktop.jpg')",
         'seattle': "url('../images/seattle.jpg')",
         'switzerland': "url('../images/switzerland.jpg')",
         'sydney': "url('../images/sydney.jpg')",
