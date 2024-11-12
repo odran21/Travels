@@ -4,10 +4,10 @@
 
 
 .cards--Container{
-    @apply w-auto h-72 items-center overflow-x-auto overscroll-x-contain flex space-x-4
+    @apply p-4 items-center overflow-x-auto overscroll-x-contain flex space-x-4
 }
 .card{
-    @apply w-48 h-64 shadow-md rounded-lg overflow-hidden flex-none
+    @apply w-48 h-72 shadow-lg rounded-lg overflow-hidden flex-none transform transition-all hover:-translate-y-4 hover:shadow-xl
 }
 
 .card--Cover{
