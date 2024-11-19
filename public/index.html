@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travels</title>
     <link rel="stylesheet" href="../public/css/tailwind.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 
@@ -21,10 +21,7 @@
                     <!-- Barra de búsqueda -->
                     <input class="w-1/2 p-4 rounded-full shadow-md outline-none transition-all duration-300
                     focus:ring-2 focus:ring-primary focus:w-11/12 focus:shadow-lg
-                    md:w-2/3 lg:hidden " 
-                    placeholder=" San Francisco" 
-                    type="search"
-                    aria-label="Search destinations">
+                    md:w-2/3 lg:hidden " placeholder=" San Francisco" type="search" aria-label="Search destinations">
                     <p class="ml-12 pb-8 text-2xl font-semibold hidden lg:block">Find more locations like this</p>
                     <!-- Botón de explorar -->
                     <button class="px-8 py-4 text-xl font-semibold text-primary bg-white rounded-full
@@ -153,60 +150,64 @@
         </div>
         <div id="trending_stays">
             <p class="text-3xl text-center font-bold p-4 text-primary">Trending stays</p>
-            <div class="flex flex-col">
-                <div class="w-10/12 h-96 mx-auto my-4 bg-chicago bg-cover rounded-xl ">
+            <div class="flex flex-col lg:flex-row lg:flex-wrap gap-4">
+                <div class="w-10/12 lg:w-full h-96 mx-auto lg:mx-4 my-4 bg-chicago bg-cover rounded-xl">
                     <p class="card--Info__Title">Chicago</p>
                     <p class="card--Info__SubTitle font-semibold ">2 bedrooms, 1 bathroom, and 1 kitchen</p>
                 </div>
-                <div class="w-10/12 h-96 mx-auto my-4 bg-yosemite bg-cover rounded-xl ">
-                    <p class="card--Info__Title">Yosemite</p>
-                    <p class="card--Info__SubTitle font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
+                <div class="w-10/12 h-full mx-auto grid grid-cols-1 lg:grid-cols-5 lg:grid-rows-2 lg:place-items-center lg:place-content-stretch gap-4 lg:w-full lg:mx-4">
+                    <div class="w-full h-96 bg-yosemite bg-cover rounded-xl lg:row-span-2 lg:col-span-2 lg:h-[49rem] lg:bg-center lg:pt-12">
+                        <p class="card--Info__Title">Yosemite</p>
+                        <p class="card--Info__SubTitle font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
+                    </div>
+                    <div class="w-full h-96 bg-iceland bg-cover rounded-xl lg:row-span-1 lg:col-span-3 lg:bg-center lg:pt-12">
+                        <p class="card--Info__Title text-white">Iceland</p>
+                        <p class="card--Info__SubTitle text-white font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
+                    </div>
+                    <div class="w-full h-96 bg-bali bg-cover rounded-xl lg:row-span-1 lg:col-span-3 lg:bg-center lg:pt-12">
+                        <p class="card--Info__Title text-white">Switzerland</p>
+                        <p class="card--Info__SubTitle text-white font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
+                    </div>
                 </div>
-                <div class="w-10/12 h-96 mx-auto my-4 bg-iceland bg-cover rounded-xl ">
-                    <p class="card--Info__Title">Iceland</p>
-                    <p class="card--Info__SubTitle font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
-                </div>
-                <div class="w-10/12 h-96 mx-auto my-4 bg-switzerland bg-cover rounded-xl ">
-                    <p class="card--Info__Title">Switzerland</p>
-                    <p class="card--Info__SubTitle font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
-                </div>
-                <div class="w-10/12 h-96 mx-auto my-4 bg-miami bg-cover rounded-xl ">
-                    <p class="card--Info__Title">Miami</p>
-                    <p class="card--Info__SubTitle font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
-                </div>
-                <div class="w-10/12 h-96 mx-auto my-4 bg-sanFrancisco bg-cover rounded-xl ">
-                    <p class="card--Info__Title">San Francisco</p>
-                    <p class="card--Info__SubTitle font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
-                </div>
-                <div class="w-10/12 h-96 mx-auto my-4 bg-norway bg-cover rounded-xl ">
-                    <p class="card--Info__Title">Norway</p>
-                    <p class="card--Info__SubTitle font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
+                <div class="w-10/12 h-full mx-auto grid grid-cols-1 lg:grid-cols-5 lg:grid-rows-2 lg:place-items-center lg:place-content-stretch gap-4 lg:w-full lg:mx-4">
+                    <div class="w-full h-96 bg-norway bg-cover rounded-xl lg:row-span-2 lg:col-span-2 lg:h-[49rem] lg:bg-center lg:pt-12">
+                        <p class="card--Info__Title text-black">Norway</p>
+                        <p class="card--Info__SubTitle font-semibold text-black">2 bedrooms, 1 bathroom, and 1 kitchen</p>
+                    </div>
+                    <div class="w-full h-96 bg-miami bg-cover rounded-xl lg:row-span-1 lg:col-span-3 lg:bg-center lg:pt-12">
+                        <p class="card--Info__Title text-white">Miami</p>
+                        <p class="card--Info__SubTitle text-white font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
+                    </div>
+                    <div class="w-full h-96 bg-sanFrancisco bg-cover rounded-xl lg:row-span-1 lg:col-span-3 lg:bg-center lg:pt-12">
+                        <p class="card--Info__Title">San Francisco</p>
+                        <p class="card--Info__SubTitle font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
+                    </div>
                 </div>
                 <div class="w-10/12 h-96 mx-auto my-4 bg-venezuela bg-cover rounded-xl ">
                     <p class="card--Info__Title">Venezuela</p>
                     <p class="card--Info__SubTitle font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
                 </div>
-                <div class="w-10/12 h-96 mx-auto my-4 bg-bali bg-cover rounded-xl ">
-                    <p class="card--Info__Title">Bali</p>
-                    <p class="card--Info__SubTitle font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
+                <div class="w-10/12 h-96 mx-auto my-4 bg-bali bg-cover bg-center rounded-xl ">
+                    <p class="card--Info__Title text-white">Bali</p>
+                    <p class="card--Info__SubTitle text-white font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
                 </div>
-                <div class="w-10/12 h-96 mx-auto my-4 bg-europe bg-cover rounded-xl ">
+                <div class="w-10/12 h-96 mx-auto my-4 bg-europe bg-cover bg-center rounded-xl ">
                     <p class="card--Info__Title">Europe</p>
                     <p class="card--Info__SubTitle font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
                 </div>
-                <div class="w-10/12 h-96 mx-auto my-4 bg-sydney bg-cover rounded-xl ">
+                <div class="w-10/12 h-96 mx-auto my-4 bg-sydney bg-cover bg-center rounded-xl ">
                     <p class="card--Info__Title">Sydney</p>
                     <p class="card--Info__SubTitle font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
                 </div>
-                <div class="w-10/12 h-96 mx-auto my-4 bg-LA bg-cover rounded-xl ">
-                    <p class="card--Info__Title">Los Angeles</p>
-                    <p class="card--Info__SubTitle font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
+                <div class="w-10/12 h-96 mx-auto my-4 bg-LA bg-cover bg-center rounded-xl ">
+                    <p class="card--Info__Title text-white">Los Angeles</p>
+                    <p class="card--Info__SubTitle text-white font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
                 </div>
-                <div class="w-10/12 h-96 mx-auto my-4 bg-seattle bg-cover rounded-xl ">
+                <div class="w-10/12 h-96 mx-auto my-4 bg-seattle bg-cover bg-center rounded-xl ">
                     <p class="card--Info__Title">Seattle</p>
                     <p class="card--Info__SubTitle font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
                 </div>
-                <div class="w-10/12 h-96 mx-auto my-4 bg-new_york bg-cover rounded-xl ">
+                <div class="w-10/12 h-96 mx-auto my-4 bg-new_york bg-cover bg-center rounded-xl ">
                     <p class="card--Info__Title">New York</p>
                     <p class="card--Info__SubTitle font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
                 </div>
@@ -245,22 +246,22 @@
                 </div>
             </div>
 
-            <footer class="w-full h-auto bg-gray-500 rounded-t-lg rounded-r-lg">
-                <p class="w-10/12 h-auto p-4 mx-auto text-xl font-bold">About Us</p>
-                <section class="w-full p-4 flex justify-evenly">
-                    <div class="w-1/2">
-                        <p class="w-10/12 h-auto mx-auto text-lg font-semibold text-gray-300">Who we are?</p>
-                        <p class="w-10/12 h-auto mx-auto text-lg font-semibold text-gray-300">Investors</p>
-                        <p class="w-10/12 h-auto mx-auto text-lg font-semibold text-gray-300">Jobs</p>
-                    </div>
-                    <div class="w-1/2">
-                        <p class="w-10/12 h-auto mx-auto text-lg font-semibold text-gray-300">More</p>
-                        <p class="w-10/12 h-auto mx-auto text-lg font-semibold text-gray-300">Terms and agree</p>
-                        <p class="w-10/12 h-auto mx-auto text-lg font-semibold text-gray-300">Travel, inc.</p>
-                    </div>
-                </section>
-            </footer>
         </div>
+        <footer class="w-full h-auto bg-gray-500 rounded-t-lg rounded-r-lg">
+            <p class="w-10/12 h-auto p-4 mx-auto text-xl font-bold">About Us</p>
+            <section class="w-full p-4 flex justify-evenly">
+                <div class="w-1/2">
+                    <p class="w-10/12 h-auto mx-auto text-lg font-semibold text-gray-300">Who we are?</p>
+                    <p class="w-10/12 h-auto mx-auto text-lg font-semibold text-gray-300">Investors</p>
+                    <p class="w-10/12 h-auto mx-auto text-lg font-semibold text-gray-300">Jobs</p>
+                </div>
+                <div class="w-1/2">
+                    <p class="w-10/12 h-auto mx-auto text-lg font-semibold text-gray-300">More</p>
+                    <p class="w-10/12 h-auto mx-auto text-lg font-semibold text-gray-300">Terms and agree</p>
+                    <p class="w-10/12 h-auto mx-auto text-lg font-semibold text-gray-300">Travel, inc.</p>
+                </div>
+            </section>
+        </footer>
         <div class="w-full h-16 bg-white fixed left-0 bottom-0 shadow-md flex items-center justify-around md:hidden"
             id="tab_bar">
             <a href="#home">
@@ -298,8 +299,8 @@
                         fill="#3F3F46" />
                 </svg>
             </a>
+            <!-- <i class="fa-solid fa-sun"></i> -->
         </div>
-        <!-- <i class="fa-solid fa-sun"></i> -->
 </body>
 
 </html>
