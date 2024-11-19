@@ -15,7 +15,7 @@
 }
 
 .card--Info{
-    @apply w-full h-2/5 bg-secondary
+    @apply w-full h-2/5 bg-secondary dark:bg-gray-800 dark:text-white
 }
 
 .card--Info__Title{
@@ -27,10 +27,10 @@
 }
 
 .card:nth-of-type(even) .card--Info {
-    @apply bg-white;
+    @apply bg-white dark:bg-gray-600
 }
 
 .card:nth-of-type(even) .card--Info__Title,
 .card:nth-of-type(even) .card--Info__SubTitle {
-    @apply text-terciary;
+    @apply text-terciary dark:text-primary
 }
