@@ -9,68 +9,70 @@
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <!-- <script src="//unpkg.com/alpinejs" defer></script> -->
-     <script defer>
+    <script defer>
         // Espera a que el DOM esté completamente cargado
-document.addEventListener('DOMContentLoaded', () => {
-    // Obtener elementos necesarios
-    const htmlElement = document.querySelector('html');
-    const toggleButton = document.querySelector('#toggle');
-    const toggleButtonSm = document.querySelector('#toggle-sm');
+        document.addEventListener('DOMContentLoaded', () => {
+            // Obtener elementos necesarios
+            const htmlElement = document.querySelector('html');
+            const toggleButton = document.querySelector('#toggle');
+            const toggleButtonSm = document.querySelector('#toggle-sm');
 
-    // Verificar si hay una preferencia guardada
-    const darkMode = localStorage.getItem('darkMode');
-    
-    // Aplicar modo oscuro si estaba guardado
-    if (darkMode === 'enabled') {
-        htmlElement.classList.add('dark');
-    }
+            // Verificar si hay una preferencia guardada
+            const darkMode = localStorage.getItem('darkMode');
 
-    // Función para alternar el modo oscuro
-    const toggleDarkMode = () => {
-        // Comprobar si el modo oscuro está activado
-        if (htmlElement.classList.contains('dark')) {
-            htmlElement.classList.remove('dark');
-            localStorage.setItem('darkMode', 'disabled');
-        } else {
-            htmlElement.classList.add('dark');
-            localStorage.setItem('darkMode', 'enabled');
-        }
-    };
-
-    // Agregar event listeners a los botones
-    if (toggleButton) {
-        toggleButton.addEventListener('click', toggleDarkMode);
-    }
-    
-    if (toggleButtonSm) {
-        toggleButtonSm.addEventListener('click', toggleDarkMode);
-    }
-
-    // Detectar preferencia del sistema
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    // Aplicar modo oscuro inicial si el sistema lo prefiere y no hay preferencia guardada
-    if (prefersDarkScheme.matches && !localStorage.getItem('darkMode')) {
-        htmlElement.classList.add('dark');
-        localStorage.setItem('darkMode', 'enabled');
-    }
-
-    // Escuchar cambios en la preferencia del sistema
-    prefersDarkScheme.addListener((e) => {
-        if (!localStorage.getItem('darkMode')) {
-            if (e.matches) {
+            // Aplicar modo oscuro si estaba guardado
+            if (darkMode === 'enabled') {
                 htmlElement.classList.add('dark');
-            } else {
-                htmlElement.classList.remove('dark');
             }
-        }
-    });
-});
-     </script>
+
+            // Función para alternar el modo oscuro
+            const toggleDarkMode = () => {
+                // Comprobar si el modo oscuro está activado
+                if (htmlElement.classList.contains('dark')) {
+                    htmlElement.classList.remove('dark');
+                    localStorage.setItem('darkMode', 'disabled');
+                } else {
+                    htmlElement.classList.add('dark');
+                    localStorage.setItem('darkMode', 'enabled');
+                }
+            };
+
+            // Agregar event listeners a los botones
+            if (toggleButton) {
+                toggleButton.addEventListener('click', toggleDarkMode);
+            }
+
+            if (toggleButtonSm) {
+                toggleButtonSm.addEventListener('click', toggleDarkMode);
+            }
+
+            // Detectar preferencia del sistema
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+            // Aplicar modo oscuro inicial si el sistema lo prefiere y no hay preferencia guardada
+            if (prefersDarkScheme.matches && !localStorage.getItem('darkMode')) {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('darkMode', 'enabled');
+            }
+
+            // Escuchar cambios en la preferencia del sistema
+            prefersDarkScheme.addListener((e) => {
+                if (!localStorage.getItem('darkMode')) {
+                    if (e.matches) {
+                        htmlElement.classList.add('dark');
+                    } else {
+                        htmlElement.classList.remove('dark');
+                    }
+                }
+            });
+        });
+    </script>
+    <link rel="icon" href="https://fontawesome.com/v6/icons/plane-departure?f=classic&s=solid">
 </head>
 
 <body class="font-Monserrat dark:bg-gray-900">
-    <nav class="w-full h-14 hidden bg-white lg:flex items-center justify-between fixed z-10 shadow-md dark:bg-gray-800 dark:shadow-white">
+    <nav
+        class="w-full h-14 hidden bg-white lg:flex items-center justify-between fixed z-10 shadow-md dark:bg-gray-800 dark:shadow-white">
         <div class="w-auto h-auto">
             <p class="text-xl text-primary font-black ml-4">Travels</p>
         </div>
@@ -242,34 +244,46 @@ document.addEventListener('DOMContentLoaded', () => {
         <div id="trending_stays">
             <p class="text-3xl text-center font-bold p-4 text-primary">Trending stays</p>
             <div class="flex flex-col lg:flex-row lg:flex-wrap gap-4">
-                <div class="w-10/12 lg:w-full h-96 mx-auto lg:mx-4 my-4 bg-chicago bg-cover rounded-xl">
+                <div class="w-10/12 h-96 mx-auto 4 my-4 bg-chicago bg-cover rounded-xl">
                     <p class="card--Info__Title">Chicago</p>
                     <p class="card--Info__SubTitle font-semibold ">2 bedrooms, 1 bathroom, and 1 kitchen</p>
                 </div>
-                <div class="w-10/12 h-full mx-auto grid grid-cols-1 lg:grid-cols-5 lg:grid-rows-2 lg:place-items-center lg:place-content-stretch gap-4 lg:w-full lg:mx-4">
-                    <div class="w-full h-96 bg-yosemite bg-cover rounded-xl lg:row-span-2 lg:col-span-2 lg:h-[49rem] lg:bg-center lg:pt-12">
+                <div
+                    class="w-10/12 h-full mx-auto grid grid-cols-1 lg:grid-cols-5 lg:grid-rows-2 lg:place-items-center lg:place-content-stretch gap-4">
+                    <div
+                        class="w-full h-96 bg-yosemite bg-cover rounded-xl lg:row-span-2 lg:col-span-2 lg:h-[49rem] lg:bg-center lg:pt-12">
                         <p class="card--Info__Title">Yosemite</p>
                         <p class="card--Info__SubTitle font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
                     </div>
-                    <div class="w-full h-96 bg-iceland bg-cover rounded-xl lg:row-span-1 lg:col-span-3 lg:bg-center lg:pt-12">
+                    <div
+                        class="w-full h-96 bg-iceland bg-cover rounded-xl lg:row-span-1 lg:col-span-3 lg:bg-center lg:pt-12">
                         <p class="card--Info__Title text-white">Iceland</p>
-                        <p class="card--Info__SubTitle text-white font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
+                        <p class="card--Info__SubTitle text-white font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen
+                        </p>
                     </div>
-                    <div class="w-full h-96 bg-bali bg-cover rounded-xl lg:row-span-1 lg:col-span-3 lg:bg-center lg:pt-12">
+                    <div
+                        class="w-full h-96 bg-bali bg-cover rounded-xl lg:row-span-1 lg:col-span-3 lg:bg-center lg:pt-12">
                         <p class="card--Info__Title text-white">Switzerland</p>
-                        <p class="card--Info__SubTitle text-white font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
+                        <p class="card--Info__SubTitle text-white font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen
+                        </p>
                     </div>
                 </div>
-                <div class="w-10/12 h-full mx-auto grid grid-cols-1 lg:grid-cols-5 lg:grid-rows-2 lg:place-items-center lg:place-content-stretch gap-4 lg:w-full lg:mx-4">
-                    <div class="w-full h-96 bg-norway bg-cover rounded-xl lg:row-span-2 lg:col-span-2 lg:h-[49rem] lg:bg-center lg:pt-12">
+                <div
+                    class="w-10/12 h-full mx-auto grid grid-cols-1 lg:grid-cols-5 lg:grid-rows-2 lg:place-items-center lg:place-content-stretch gap-4">
+                    <div
+                        class="w-full h-96 bg-norway bg-cover rounded-xl lg:row-span-2 lg:col-span-2 lg:h-[49rem] lg:bg-center lg:pt-12">
                         <p class="card--Info__Title text-black">Norway</p>
-                        <p class="card--Info__SubTitle font-semibold text-black">2 bedrooms, 1 bathroom, and 1 kitchen</p>
+                        <p class="card--Info__SubTitle font-semibold text-black">2 bedrooms, 1 bathroom, and 1 kitchen
+                        </p>
                     </div>
-                    <div class="w-full h-96 bg-miami bg-cover rounded-xl lg:row-span-1 lg:col-span-3 lg:bg-center lg:pt-12">
+                    <div
+                        class="w-full h-96 bg-miami bg-cover rounded-xl lg:row-span-1 lg:col-span-3 lg:bg-center lg:pt-12">
                         <p class="card--Info__Title text-white">Miami</p>
-                        <p class="card--Info__SubTitle text-white font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
+                        <p class="card--Info__SubTitle text-white font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen
+                        </p>
                     </div>
-                    <div class="w-full h-96 bg-sanFrancisco bg-cover rounded-xl lg:row-span-1 lg:col-span-3 lg:bg-center lg:pt-12">
+                    <div
+                        class="w-full h-96 bg-sanFrancisco bg-cover rounded-xl lg:row-span-1 lg:col-span-3 lg:bg-center lg:pt-12">
                         <p class="card--Info__Title">San Francisco</p>
                         <p class="card--Info__SubTitle font-semibold">2 bedrooms, 1 bathroom, and 1 kitchen</p>
                     </div>
@@ -316,7 +330,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="w-10/12 h-auto mx-auto my-4">
                     <p class="text-primary text-xl font-semibold">Payment Methods</p>
-                    <p class="text-lg font-medium dark:text-white">We accept: VISA, MasterCard, American Express, Paypal, and Binance
+                    <p class="text-lg font-medium dark:text-white">We accept: VISA, MasterCard, American Express,
+                        Paypal, and Binance
                     </p>
                 </div>
                 <div class="w-10/12 h-auto mx-auto my-4">
